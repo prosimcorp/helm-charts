@@ -3,7 +3,7 @@
 apiVersion: v2
 name: reforma
 type: application
-description: A Helm chart for reforma, a tool to modify resources in kubernetes
+description: A Helm chart for reforma, a Kubernetes operator to patch resources with information from other resources
 version: 0.1.0 # chart version
 appVersion: "0.2.0" # reforma version
 kubeVersion: ">=1.22.0-0" # kubernetes version
