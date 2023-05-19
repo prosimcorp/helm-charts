@@ -1,0 +1,51 @@
+apiVersion: v1
+entries:
+  reforma:
+  - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2023-05-19T18:55:56.034549869Z"
+    description: A Helm chart for reforma, a Kubernetes operator to patch resources
+      with information from other resources
+    digest: 0da060402d3be141a6ffad9c87d625111b2feac52dc7ae722f762e1750911e6d
+    home: https://github.com/prosimcorp/helm-charts
+    keywords:
+    - prosimcorp
+    - reforma
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: prosimcorp
+      url: https://github.com/prosimcorp
+    name: reforma
+    sources:
+    - https://github.com/prosimcorp/helm-charts/tree/main/charts/reforma
+    - https://github.com/prosimcorp/reforma
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/reforma-0.1.0/reforma-0.1.0.tgz
+    version: 0.1.0
+  replika:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2023-05-19T18:55:56.189180158Z"
+    description: A Helm chart for replika, a Kubernetes operator to replicate resources
+      between namespaces
+    digest: 36ba12a46e7771ea667b4baefb2ed54ec6ba969cc371a9548d1f0ee27415963e
+    home: https://github.com/prosimcorp/helm-charts
+    keywords:
+    - prosimcorp
+    - replika
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: prosimcorp
+      url: https://github.com/prosimcorp
+    name: replika
+    sources:
+    - https://github.com/prosimcorp/helm-charts/tree/main/charts/replika
+    - https://github.com/prosimcorp/replika
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/replika-0.1.0/replika-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-05-19T18:55:56.189186258Z"
