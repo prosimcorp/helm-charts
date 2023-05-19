@@ -3,13 +3,13 @@
 apiVersion: v2
 name: replika
 type: application
-description: A Helm chart for replika, a tool to replicate resources in kubernetes
+description: A Helm chart for replika, a Kubernetes operator to replicate resources between namespaces
 version: 0.1.0 # chart version
 appVersion: "0.3.0" # replika version
 kubeVersion: ">=1.22.0-0" # kubernetes version
-home: https://github.com/prosimcorp/prosimcorp-helm
+home: https://github.com/prosimcorp/helm-charts
 sources:
-  - https://github.com/prosimcorp/prosimcorp-helm/tree/main/charts/replika
+  - https://github.com/prosimcorp/helm-charts/tree/main/charts/replika
   - https://github.com/prosimcorp/replika
 keywords:
   - prosimcorp
