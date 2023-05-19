@@ -1,15 +1,18 @@
+{{- if and (.Values.controller.metrics.enabled) (.Values.controller.metrics.service.enabled) }}
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "reforma.fullname" . }}
+  name: {{ include "reforma.fullname" . }}-metrics
   labels:
     {{- include "reforma.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.controller.metrics.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: {{ .Values.controller.metrics.service.port }}
+      name: metrics
       protocol: TCP
-      name: http
+      targetPort: metrics
   selector:
     {{- include "reforma.selectorLabels" . | nindent 4 }}
+
+{{- end }}
