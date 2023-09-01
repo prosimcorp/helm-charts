@@ -3,6 +3,29 @@ entries:
   rabbit-stalker:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2023-09-01T16:39:53.930664547Z"
+    description: A Helm chart for rabbit-stalker, a Kubernetes operator to restart
+      workloads under some conditions coming from RabbitMQ
+    digest: 89c08c5fcb48e202fea47e5dd3168574dcf8bfd8cb5d49172f1a970a0860cea6
+    home: https://github.com/prosimcorp/helm-charts
+    keywords:
+    - prosimcorp
+    - rabbit-stalker
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: prosimcorp
+      url: https://github.com/prosimcorp
+    name: rabbit-stalker
+    sources:
+    - https://github.com/prosimcorp/helm-charts/tree/main/charts/rabbit-stalker
+    - https://github.com/prosimcorp/rabbit-stalker
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/rabbit-stalker-0.1.1/rabbit-stalker-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2023-09-01T16:35:55.172376563Z"
     description: A Helm chart for rabbit-stalker, a Kubernetes operator to restart
       workloads under some conditions coming from RabbitMQ
@@ -72,4 +95,4 @@ entries:
     urls:
     - https://github.com/prosimcorp/helm-charts/releases/download/replika-0.1.0/replika-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-01T16:35:55.450954642Z"
+generated: "2023-09-01T16:39:53.930672348Z"
