@@ -4,8 +4,8 @@ apiVersion: v2
 name: rabbit-stalker
 type: application
 description: A Helm chart for rabbit-stalker, a Kubernetes operator to restart workloads under some conditions coming from RabbitMQ
-version: 0.1.1 # chart version
-appVersion: "1.0.0" # rabbit-stalker version
+version: 0.1.2 # chart version
+appVersion: "1.1.0" # rabbit-stalker version
 kubeVersion: ">=1.22.0-0" # kubernetes version
 home: https://github.com/prosimcorp/helm-charts
 sources:
