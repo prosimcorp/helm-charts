@@ -40,7 +40,7 @@ controller:
   replicaCount: 1
 
   image:
-    repository: prosimcorp/reforma
+    repository: ghcr.io/prosimcorp/reforma
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: ""
