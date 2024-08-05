@@ -83,8 +83,10 @@ rules:
   resources:
   - clusterroles
   verbs:
+  - bind
   - create
   - delete
+  - escalate
   - get
   - list
   - patch
@@ -95,8 +97,10 @@ rules:
   resources:
   - rolebindings
   verbs:
+  - bind
   - create
   - delete
+  - escalate
   - get
   - list
   - patch
