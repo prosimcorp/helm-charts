@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   kuberbac:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2024-08-08T14:43:27.756449148Z"
+    description: A Helm chart for Kuberbac, a Kubernetes operator that makes it easy
+      to manage detailed RBAC policies. It lets you handle dynamic roles and role-bindings.
+    digest: 5be1aa7d5c17eddd1c0c5882b0bcfc618bc5c028d635d8bd56598b5a9a03bd28
+    home: https://github.com/prosimcorp/helm-charts
+    keywords:
+    - prosimcorp
+    - kuberbac
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - name: prosimcorp
+      url: https://github.com/prosimcorp
+    name: kuberbac
+    sources:
+    - https://github.com/prosimcorp/helm-charts/tree/main/charts/kuberbac
+    - https://github.com/prosimcorp/kuberbac
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/kuberbac-0.3.0/kuberbac-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.2.0
     created: "2024-08-06T20:57:15.995057196Z"
     description: A Helm chart for Kuberbac, a Kubernetes operator that makes it easy
@@ -303,4 +326,4 @@ entries:
     urls:
     - https://github.com/prosimcorp/helm-charts/releases/download/replika-0.1.0/replika-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-06T20:57:15.995083536Z"
+generated: "2024-08-08T14:43:27.75649308Z"
