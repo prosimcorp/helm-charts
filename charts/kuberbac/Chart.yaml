@@ -4,8 +4,8 @@ apiVersion: v2
 name: kuberbac
 type: application
 description: A Helm chart for Kuberbac, a Kubernetes operator that makes it easy to manage detailed RBAC policies. It lets you handle dynamic roles and role-bindings.
-version: 0.2.0 # chart version
-appVersion: "0.2.0" # kuberbac version
+version: 0.3.0 # chart version
+appVersion: "0.3.0" # kuberbac version
 kubeVersion: ">=1.22.0-0" # kubernetes version
 home: https://github.com/prosimcorp/helm-charts
 sources:
