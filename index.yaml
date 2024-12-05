@@ -441,4 +441,34 @@ entries:
     urls:
     - https://github.com/prosimcorp/helm-charts/releases/download/replika-0.1.0/replika-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-02T19:16:39.402133005Z"
+  searchruler:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-12-05T13:21:43.160486799Z"
+    description: A Helm chart for SearchRuler, a ruler Engine that allows you  to
+      create and manage rules for your search engine.
+    digest: 2952ba0c85588b8543e60ac4523eac64849423a6add0339ca49e7b04a98e74fd
+    home: https://github.com/prosimcorp/searchruler
+    keywords:
+    - freepik
+    - prosimcorp
+    - searchruler
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: fradejasdaniel@gmail.com
+      name: Daniel Fradejas
+      url: https://github.com/prosimcorp/searchruler
+    - email: donfumero@gmail.com
+      name: Alby Hernández
+      url: https://github.com/prosimcorp/searchruler
+    - name: prosimcorp
+      url: https://github.com/prosimcorp
+    name: searchruler
+    sources:
+    - https://github.com/prosimcorp/searchruler
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/searchruler-0.1.0/searchruler-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-12-05T13:21:43.160565766Z"
