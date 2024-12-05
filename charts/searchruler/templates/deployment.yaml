@@ -35,6 +35,7 @@ spec:
           {{- end }}
           - --health-probe-bind-address=:8081
           - --leader-elect
+          {{- if .Values.controller.metrics.enabled }}
           ports:
             - containerPort: 8080
               name: metrics
