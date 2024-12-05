@@ -1,9 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: {{ include "kuberbac.fullname" . }}-manager
+  name: {{ include "searchruler.fullname" . }}-manager
   labels:
-    {{- include "kuberbac.labels" . | nindent 4 }}
+    {{- include "searchruler.labels" . | nindent 4 }}
 rules:
 - apiGroups:
   - ""
@@ -27,9 +27,9 @@ rules:
   - get
   - list
 - apiGroups:
-  - kuberbac.prosimcorp.com
+  - searchruler.prosimcorp.com
   resources:
-  - dynamicclusterroles
+  - searchrules
   verbs:
   - create
   - delete
@@ -39,23 +39,23 @@ rules:
   - update
   - watch
 - apiGroups:
-  - kuberbac.prosimcorp.com
+  - searchruler.prosimcorp.com
   resources:
-  - dynamicclusterroles/finalizers
+  - searchrules/finalizers
   verbs:
   - update
 - apiGroups:
-  - kuberbac.prosimcorp.com
+  - searchruler.prosimcorp.com
   resources:
-  - dynamicclusterroles/status
+  - searchrules/status
   verbs:
   - get
   - patch
   - update
 - apiGroups:
-  - kuberbac.prosimcorp.com
+  - searchruler.prosimcorp.com
   resources:
-  - dynamicrolebindings
+  - ruleractions
   verbs:
   - create
   - delete
@@ -65,23 +65,23 @@ rules:
   - update
   - watch
 - apiGroups:
-  - kuberbac.prosimcorp.com
+  - searchruler.prosimcorp.com
   resources:
-  - dynamicrolebindings/finalizers
+  - ruleractions/finalizers
   verbs:
   - update
 - apiGroups:
-  - kuberbac.prosimcorp.com
+  - searchruler.prosimcorp.com
   resources:
-  - dynamicrolebindings/status
+  - ruleractions/status
   verbs:
   - get
   - patch
   - update
 - apiGroups:
-  - rbac.authorization.k8s.io
+  - searchruler.prosimcorp.com
   resources:
-  - clusterroles
+  - queryconnectors
   verbs:
   - bind
   - create
@@ -93,17 +93,16 @@ rules:
   - update
   - watch
 - apiGroups:
-  - rbac.authorization.k8s.io
+  - searchruler.prosimcorp.com
   resources:
-  - clusterrolebindings
-  - rolebindings
+  - queryconnectors/finalizers
   verbs:
-  - bind
-  - create
-  - delete
-  - escalate
+  - update
+- apiGroups:
+  - searchruler.prosimcorp.com
+  resources:
+  - queryconnectors/status
+  verbs:
   - get
-  - list
   - patch
   - update
-  - watch

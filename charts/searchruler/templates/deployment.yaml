@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "kuberbac.fullname" . }}
+  name: {{ include "searchruler.fullname" . }}
   labels:
-    {{- include "kuberbac.labels" . | nindent 4 }}
+    {{- include "searchruler.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.controller.autoscaling.enabled }}
   replicas: {{ .Values.controller.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "kuberbac.selectorLabels" . | nindent 6 }}
+      {{- include "searchruler.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.controller.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "kuberbac.selectorLabels" . | nindent 8 }}
+        {{- include "searchruler.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.controller.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "kuberbac.serviceAccountName" . }}
+      serviceAccountName: {{ include "searchruler.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.controller.podSecurityContext | nindent 8 }}
       containers:

@@ -1,14 +1,14 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: {{ include "kuberbac.fullname" . }}-manager
+  name: {{ include "searchruler.fullname" . }}-manager
   labels:
-    {{- include "kuberbac.labels" . | nindent 4 }}
+    {{- include "searchruler.labels" . | nindent 4 }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: {{ include "kuberbac.fullname" . }}-manager
+  name: {{ include "searchruler.fullname" . }}-manager
 subjects:
   - kind: ServiceAccount
-    name: {{ include "kuberbac.serviceAccountName" . }}
+    name: {{ include "searchruler.serviceAccountName" . }}
     namespace: {{ .Release.Namespace }}
