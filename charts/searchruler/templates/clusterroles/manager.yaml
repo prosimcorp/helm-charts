@@ -8,27 +8,16 @@ rules:
 - apiGroups:
   - ""
   resources:
-  - namespaces
+  - secrets
   verbs:
   - get
   - list
-- apiGroups:
-  - ""
-  resources:
-  - serviceaccounts
-  verbs:
-  - get
-  - list
-- apiGroups:
-  - '*'
-  resources:
-  - '*'
-  verbs:
-  - get
-  - list
+  - watch
 - apiGroups:
   - searchruler.prosimcorp.com
   resources:
+  - queryconnectors
+  - ruleractions
   - searchrules
   verbs:
   - create
@@ -41,67 +30,17 @@ rules:
 - apiGroups:
   - searchruler.prosimcorp.com
   resources:
+  - queryconnectors/finalizers
+  - ruleractions/finalizers
   - searchrules/finalizers
   verbs:
   - update
 - apiGroups:
   - searchruler.prosimcorp.com
   resources:
-  - searchrules/status
-  verbs:
-  - get
-  - patch
-  - update
-- apiGroups:
-  - searchruler.prosimcorp.com
-  resources:
-  - ruleractions
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - searchruler.prosimcorp.com
-  resources:
-  - ruleractions/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - searchruler.prosimcorp.com
-  resources:
-  - ruleractions/status
-  verbs:
-  - get
-  - patch
-  - update
-- apiGroups:
-  - searchruler.prosimcorp.com
-  resources:
-  - queryconnectors
-  verbs:
-  - bind
-  - create
-  - delete
-  - escalate
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - searchruler.prosimcorp.com
-  resources:
-  - queryconnectors/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - searchruler.prosimcorp.com
-  resources:
   - queryconnectors/status
+  - ruleractions/status
+  - searchrules/status
   verbs:
   - get
   - patch
