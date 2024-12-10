@@ -6,8 +6,8 @@ type: application
 description: >-
   A Helm chart for SearchRuler, a ruler Engine that allows you 
   to create and manage rules for your search engine.
-version: 0.1.4 # chart version
-appVersion: "0.1.3" # searchruler version
+version: 0.2.0 # chart version
+appVersion: "0.2.0" # searchruler version
 kubeVersion: ">=1.22.0-0" # kubernetes version
 home: https://github.com/prosimcorp/searchruler
 sources:
