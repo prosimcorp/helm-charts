@@ -30,6 +30,8 @@ rules:
   - queryconnectors
   - ruleractions
   - searchrules
+  - clusterqueryconnectors
+  - clusterruleractions
   verbs:
   - create
   - delete
@@ -44,6 +46,8 @@ rules:
   - queryconnectors/finalizers
   - ruleractions/finalizers
   - searchrules/finalizers
+  - clusterqueryconnectors/finalizers
+  - clusterruleractions/finalizers
   verbs:
   - update
 - apiGroups:
@@ -52,6 +56,8 @@ rules:
   - queryconnectors/status
   - ruleractions/status
   - searchrules/status
+  - clusterqueryconnectors/status
+  - clusterruleractions/status
   verbs:
   - get
   - patch
