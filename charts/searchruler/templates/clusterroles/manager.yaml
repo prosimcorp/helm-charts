@@ -6,7 +6,16 @@ metadata:
     {{- include "searchruler.labels" . | nindent 4 }}
 rules:
 - apiGroups:
-  - "events.k8s.io"
+  - ""
+  resources:
+  - events
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - events.k8s.io
   resources:
   - events
   verbs:
@@ -17,19 +26,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - ""
-  resources:
-  - secrets
-  verbs:
-  - get
-  - list
-  - watch
-- apiGroups:
   - searchruler.prosimcorp.com
   resources:
   - queryconnectors
   - ruleractions
   - searchrules
+  - clusterqueryconnectors
+  - clusterruleractions
   verbs:
   - create
   - delete
@@ -44,6 +47,8 @@ rules:
   - queryconnectors/finalizers
   - ruleractions/finalizers
   - searchrules/finalizers
+  - clusterqueryconnectors/finalizers
+  - clusterruleractions/finalizers
   verbs:
   - update
 - apiGroups:
@@ -52,6 +57,8 @@ rules:
   - queryconnectors/status
   - ruleractions/status
   - searchrules/status
+  - clusterqueryconnectors/status
+  - clusterruleractions/status
   verbs:
   - get
   - patch

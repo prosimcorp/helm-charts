@@ -15,4 +15,24 @@ spec:
   selector:
     {{- include "searchruler.selectorLabels" . | nindent 4 }}
 
+---
+{{- end }}
+
+{{- if and (.Values.controller.webserver.enabled) (.Values.controller.webserver.service.enabled) }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "searchruler.fullname" . }}-webserver
+  labels:
+    {{- include "searchruler.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.controller.webserver.service.type }}
+  ports:
+    - port: {{ .Values.controller.webserver.service.port }}
+      name: webserver
+      protocol: TCP
+      targetPort: webserver
+  selector:
+    {{- include "searchruler.selectorLabels" . | nindent 4 }}
+
 {{- end }}
