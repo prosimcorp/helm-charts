@@ -35,11 +35,21 @@ spec:
           {{- end }}
           - --health-probe-bind-address=:8081
           - --leader-elect
-          {{- if .Values.controller.metrics.enabled }}
+          {{- if .Values.controller.webserver.enabled }}
+          - --webserver-address=127.0.0.1:8082
+          {{- end }}
+          {{- if or .Values.controller.metrics.enabled .Values.controller.webserver.enabled }}
           ports:
+            {{- if .Values.controller.metrics.enabled }}
             - containerPort: 8080
               name: metrics
               protocol: TCP
+            {{- end }}
+            {{- if .Values.controller.webserver.enabled }}
+            - containerPort: 8082
+              name: webserver
+              protocol: TCP
+            {{- end }}
           {{- end }}
           command:
             - /manager
