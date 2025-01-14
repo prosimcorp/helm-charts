@@ -74,3 +74,11 @@ controller:
       enabled: false
       type: ClusterIP
       port: 9090
+
+  webserver:
+    enabled: true
+
+    service:
+      enabled: true
+      type: ClusterIP
+      port: 8082
