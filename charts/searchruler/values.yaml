@@ -82,3 +82,12 @@ controller:
       enabled: true
       type: ClusterIP
       port: 8082
+
+  customMetrics:
+    enabled: true
+
+    service:
+      enabled: true
+      labels: {}
+      type: ClusterIP
+      port: 9090

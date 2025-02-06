@@ -38,6 +38,10 @@ spec:
           {{- if .Values.controller.webserver.enabled }}
           - --webserver-address=127.0.0.1:8082
           {{- end }}
+          {{- if .Values.controller.customMetrics.enabled }}
+          - --rules-metrics-bind-address=127.0.0.1:9090
+          - --rules-metrics-refresh-rate=10
+          {{- end }}
           {{- if or .Values.controller.metrics.enabled .Values.controller.webserver.enabled }}
           ports:
             {{- if .Values.controller.metrics.enabled }}
@@ -48,6 +52,11 @@ spec:
             {{- if .Values.controller.webserver.enabled }}
             - containerPort: 8082
               name: webserver
+              protocol: TCP
+            {{- end }}
+            {{- if .Values.controller.customMetrics.enabled }}
+            - containerPort: 9090
+              name: custom-metrics
               protocol: TCP
             {{- end }}
           {{- end }}
