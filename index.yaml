@@ -444,6 +444,35 @@ entries:
   searchruler:
   - apiVersion: v2
     appVersion: 0.4.0
+    created: "2025-02-06T14:39:47.074439319Z"
+    description: A Helm chart for SearchRuler, a ruler Engine that allows you  to
+      create and manage rules for your search engine.
+    digest: 01f2d4caa07ea86c6f0cf7fd57077b4187328ba3a569c378054b4cabd2a1eb2d
+    home: https://github.com/prosimcorp/searchruler
+    keywords:
+    - freepik
+    - prosimcorp
+    - searchruler
+    - gitops
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: fradejasdaniel@gmail.com
+      name: Daniel Fradejas
+      url: https://github.com/prosimcorp/searchruler
+    - email: donfumero@gmail.com
+      name: Alby Hernández
+      url: https://github.com/prosimcorp/searchruler
+    - name: prosimcorp
+      url: https://github.com/prosimcorp
+    name: searchruler
+    sources:
+    - https://github.com/prosimcorp/searchruler
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/searchruler-0.4.1/searchruler-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 0.4.0
     created: "2025-02-06T08:43:04.748102901Z"
     description: A Helm chart for SearchRuler, a ruler Engine that allows you  to
       create and manage rules for your search engine.
@@ -732,4 +761,4 @@ entries:
     urls:
     - https://github.com/prosimcorp/helm-charts/releases/download/searchruler-0.1.0/searchruler-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-06T08:43:04.748160248Z"
+generated: "2025-02-06T14:39:47.074522373Z"
