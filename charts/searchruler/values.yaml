@@ -85,9 +85,13 @@ controller:
 
   customMetrics:
     enabled: true
+    listenAddress: "0.0.0.0:9090"
+    refreshRate: 10
 
     service:
       enabled: true
-      labels: {}
+      labels:
+        app.kubernetes.io/name: searchruler
+        app.kubernetes.io/instance: searchruler
       type: ClusterIP
       port: 9090

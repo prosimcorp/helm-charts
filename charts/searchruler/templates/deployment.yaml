@@ -39,8 +39,8 @@ spec:
           - --webserver-address=127.0.0.1:8082
           {{- end }}
           {{- if .Values.controller.customMetrics.enabled }}
-          - --rules-metrics-bind-address=127.0.0.1:9090
-          - --rules-metrics-refresh-rate=10
+          - --rules-metrics-bind-address={{ .Values.controller.customMetrics.listenAddress }}
+          - --rules-metrics-refresh-rate={{ .Values.controller.customMetrics.refreshRate }}
           {{- end }}
           {{- if or .Values.controller.metrics.enabled .Values.controller.webserver.enabled }}
           ports:
