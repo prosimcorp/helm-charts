@@ -1,0 +1,102 @@
+# Default values for cluster-autoscaler-status-exporter.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: prosimcorp/cluster-autoscaler-status-exporter
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+
+podAnnotations: {}
+
+podLabels: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 2112
+  annotations: {}
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+# This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+livenessProbe:
+  httpGet:
+    path: /metrics
+    port: http
+readinessProbe:
+  httpGet:
+    path: /metrics
+    port: http
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+volumes:
+  - name: config-volume
+    configMap:
+      name: binwatch-pikaso-config
+      items:
+        - key: config.yaml
+          path: config.yaml
+
+volumeMounts:
+  - name: config-volume
+    mountPath: /app/config.yaml
+    subPath: config.yaml
+    readOnly: true
+
+configMap:
+  enabled: true
+  data:
+    config.yaml: |-
+      # Logging configuration
+      logging:
+        # debug, info, warn, error, dpanic, panic, fatal
+        level: info
+        # console or json
+        format: json
+      
+      # Server configuration
+      server:
+        # Address to listen on
+        listenAddress: ":2112"
+        # Path to expose metrics on
+        metricsPath: "/metrics"
+      
+      # Configuration for the status config map
+      # By default if this config section is not provided, the exporter will look for cluster-autoscaler-status config map in
+      # kube-system namespace
+      statusConfigMap:
+        namespace: "kube-system"
+        name: "cluster-autoscaler-status"

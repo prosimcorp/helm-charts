@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "cluster-autoscaler-status-exporter.fullname" . }}
+  labels:
+    {{- include "cluster-autoscaler-status-exporter.labels" . | nindent 4 }}
+  {{ with .Values.service.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "cluster-autoscaler-status-exporter.selectorLabels" . | nindent 4 }}
