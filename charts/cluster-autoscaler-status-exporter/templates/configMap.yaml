@@ -1,0 +1,12 @@
+{{- if .Values.configMap.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "cluster-autoscaler-status-exporter.fullname" . }}-config
+  labels:
+    {{- include "cluster-autoscaler-status-exporter.labels" . | nindent 4 }}
+data:
+  {{- with .Values.configMap.data }}
+  {{- toYaml . | nindent 4 }}
+  {{- end }}
+{{- end }}
