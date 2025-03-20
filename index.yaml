@@ -3,6 +3,16 @@ entries:
   cluster-autoscaler-status-exporter:
   - apiVersion: v2
     appVersion: 0.2.0
+    created: "2025-03-20T14:42:33.839572361Z"
+    description: A Helm chart for cluster-autoscaler-status-exporter
+    digest: 596887fe6d32e91e7ff70b0c78e8f4fe83596223cd2ff0d330573d77a5851951
+    name: cluster-autoscaler-status-exporter
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/cluster-autoscaler-status-exporter-0.1.2/cluster-autoscaler-status-exporter-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.2.0
     created: "2025-03-20T14:33:03.441407891Z"
     description: A Helm chart for cluster-autoscaler-status-exporter
     digest: 7f45c3b535e0d94dc7e49bcfbc4af51961863bd03c6f02922ebb801ba8e862fc
@@ -840,4 +850,4 @@ entries:
     urls:
     - https://github.com/prosimcorp/helm-charts/releases/download/searchruler-0.1.0/searchruler-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-20T14:33:03.441497649Z"
+generated: "2025-03-20T14:42:33.839656759Z"
