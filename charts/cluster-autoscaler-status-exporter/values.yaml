@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: prosimcorp/cluster-autoscaler-status-exporter
+  repository: ghcr.io/prosimcorp/cluster-autoscaler-status-exporter
   pullPolicy: IfNotPresent
   tag: ""
 
