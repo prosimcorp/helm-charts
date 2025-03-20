@@ -65,7 +65,7 @@ affinity: {}
 volumes:
   - name: config-volume
     configMap:
-      name: binwatch-pikaso-config
+      name: config-volume
       items:
         - key: config.yaml
           path: config.yaml
