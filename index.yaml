@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  cluster-autoscaler-status-exporter:
+  - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2025-03-20T14:25:31.767482457Z"
+    description: A Helm chart for cluster-autoscaler-status-exporter
+    digest: b3b0af29233d45e5a00f7982d4cf15ef43cb6a2abded1d522c566d4d662fb417
+    name: cluster-autoscaler-status-exporter
+    type: application
+    urls:
+    - https://github.com/prosimcorp/helm-charts/releases/download/cluster-autoscaler-status-exporter-0.1.0/cluster-autoscaler-status-exporter-0.1.0.tgz
+    version: 0.1.0
   kuberbac:
   - apiVersion: v2
     appVersion: 0.4.2
@@ -819,4 +830,4 @@ entries:
     urls:
     - https://github.com/prosimcorp/helm-charts/releases/download/searchruler-0.1.0/searchruler-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-14T13:08:11.211254524Z"
+generated: "2025-03-20T14:25:31.767566123Z"
